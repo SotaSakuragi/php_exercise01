@@ -2,30 +2,45 @@
 
 class Car
 {
-    private $car_name;
-    private $car_number;
-    private $car_color;
+    private $name;
+    private $number;
+    private $color;
 
     public function __construct($car_name, $car_number, $car_color)
     {
-        $this->car_name = $car_name;
-        $this->car_number = $car_number;
-        $this->car_color = $car_color;
+        $this->name = $car_name;
+        $this->number = $car_number;
+        $this->color = $car_color;
     }
 
     public function getName()
     {
-        return $this->car_name;
+        return $this->name;
     }
 
     public function getNumber()
     {
-        return $this->car_number;
+        return $this->number;
     }
 
     public function getColor()
     {
-        return $this->car_color;
+        return $this->color;
+    }
+
+    public function setName($car_name)
+    {
+        $this->name = $car_name;
+    }
+
+    public function setNumber($car_number)
+    {
+        $this->number = $car_number;
+    }
+    
+    public function setColor($car_color)
+    {
+        $this->color = $car_color;
     }
 
     public function information()
@@ -37,21 +52,6 @@ class Car
                 "カラー:" . 
                 "{$this->getColor()}" . PHP_EOL;
 
-    }
-
-    public function setName($car_name)
-    {
-        $this->car_name = $car_name;
-    }
-
-    public function setNumber($car_number)
-    {
-        $this->car_number = $car_number;
-    }
-
-    public function setColor($car_color)
-    {
-        $this->car_color = $car_color;
     }
 
 }
